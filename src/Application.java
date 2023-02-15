@@ -17,6 +17,8 @@ public class Application {
 		System.out.println(conta.toString());
 		System.out.println("Qual valor deseja sacar: ");
 		conta.saque(sc.nextDouble());
+		System.out.println("Qual valor deseja Depositar: ");
+		conta.deposito(sc.nextDouble());
 		sc.close();
 	}
 

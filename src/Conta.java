@@ -44,13 +44,26 @@ public class Conta {
 		public double getSaldo() {
 			return saldo;
 		}
+		
+		public void novoSaldo() {
+			System.out.println("Novo saldo: "+ getSaldo());
+		}
+		
+		public void deposito(double deposito) {
+			if(deposito<0) {
+				System.out.println("Não é possivel depositar esse valor");
+			}else {
+				this.saldo=saldo+deposito;
+				novoSaldo();
+			}
+		}
 
 		public void saque(double saque) {
 			if(saque>saldo) {
 				System.out.println("Não é possivel sacar esse valor");
 			}else {
 				this.saldo=saldo-saque;
-				System.out.println("Novo saldo: "+ getSaldo());
+				novoSaldo();
 			}
 		}
 		
